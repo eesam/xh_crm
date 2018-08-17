@@ -1,0 +1,102 @@
+<div class="modal-header">
+	<h3 class="modal-title">新增排单</h3>
+</div>
+<div class="modal-body">
+	<form role="form">
+		<fieldset>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>花型</span>
+					</div>
+					<div class="col-sm-7">
+						<select class="form-control" ng-model="designSelect" ng-options="x.name for x in designs"></select>
+						<!-- <ui-select ng-model="designSelect" theme="bootstrap">
+							<ui-select-match placeholder="请选择">{{$select.selected.name}}</ui-select-match>
+							<ui-select-choices repeat="i in designs | filter:$select.search">
+								<span ng-bind="i.name"></span>
+							</ui-select-choices>
+						</ui-select> -->
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>颜色</span>
+					</div>
+					<div class="col-sm-7">
+						<select class="form-control" ng-model="colorSelect" ng-options="x.name for x in colors"></select>
+						<!-- <ui-select ng-model="colorSelect" theme="bootstrap">
+							<ui-select-match placeholder="请选择">{{$select.selected.name}}</ui-select-match>
+							<ui-select-choices repeat="i in colors | filter:$select.search">
+								<span ng-bind="i.name"></span>
+							</ui-select-choices>
+						</ui-select> -->
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>供应商</span>
+					</div>
+					<div class="col-sm-7">
+						<select class="form-control" ng-model="supplierSelect" ng-options="x.name for x in suppliers"></select>
+						<!-- <ui-select ng-model="supplierSelect" theme="bootstrap">
+							<ui-select-match placeholder="请选择">{{$select.selected.name}}</ui-select-match>
+							<ui-select-choices repeat="i in suppliers | filter:$select.search">
+								<span ng-bind="i.name"></span>
+							</ui-select-choices>
+						</ui-select> -->
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>数量</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.quantity"></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>价格</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.price"></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>时间</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.time"></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>备注</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.note"></span>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="onAdd()">确认</button>
+	<button class="btn btn-warning" ng-click="cancel()">取消</button>
+</div>

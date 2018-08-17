@@ -1,0 +1,469 @@
+.back {
+	width: 100%;
+	height: 100%;
+}
+
+.back #page-wrapper {
+	padding: 0 30px;
+	z-index: 99;
+	position: relative;
+	margin: 60px 0 0 240px;
+	background-color: #f1f1f1;
+	overflow-y: scroll;
+}
+
+
+.back fieldset .row {
+	margin-bottom: 10px;
+}
+
+.back fieldset .row-save {
+	margin-top: 20px;
+}
+
+
+/* directives:header */
+.back .header {
+	height: 60px;
+	background-color: white;
+	width: 100%;
+}
+.back .header .navbar-top-links  > li a[data-toggle="dropdown"]{
+	cursor: pointer;
+	border-right: 1px solid #CCC;
+	height: 60px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	padding: 0px 0px;
+}
+.back .header .navbar-top-links  > li a[aria-expanded="false"]{
+	color: #4d4d4d;
+}
+.back .header .navbar-top-links  > li a[aria-expanded="false"]:hover,
+.back .header .nav .open>a,
+.back .header .nav .open>a:focus{
+	background-color: #0092ff;
+	color: white;
+}
+.back .header .navbar-top-links  > li a i:first-child{
+	width: 20px;
+	margin-left: 20px;
+	margin-right: 12px;
+}
+.back .header .navbar-top-links  > li a i:last-child{
+	width: 21px;
+	margin-left: 12px;
+	margin-right: 20px;
+}
+.back .header .myconsole,.mymessage{
+	background-color: limegreen;
+	position: absolute;
+	bottom: 10px;
+	right: -8px;
+}
+.back .header .mymessage{
+	background-color: orange;
+}
+.back .header .dropdown-menu{
+	margin-top: 18px;
+	padding: 0px;
+}
+
+.back .header .dropdown-menu .triangle {
+	position: absolute;
+	top: -12px;
+	right: 50px;
+	overflow: hidden;
+	width:0;
+	height:0;
+	border-left:12px solid transparent;
+	border-right:12px solid transparent;
+	border-bottom:12px solid #fff;
+}
+.back .header .dropdown-menu li a{
+	padding: 0 8px;
+	margin: 0;
+	line-height: 50px;
+	font-size: 16px;
+	height: 50px;
+	color: #4d4d4d;
+	border-bottom: 1px solid #dddddd;
+}
+.back .header .dropdown-menu li:last-child a{
+	border: none;
+}
+.back .header .dropdown-menu.dropdown-messages li {
+	height: 100px;
+}
+.back .header .dropdown-menu.dropdown-messages > li > a {
+	height: 100%;
+}
+/* directives:header */
+
+/* directives:sidebar */
+.back .sidebar {
+	position: fixed;
+	width: 100%;
+	top:60px;
+	bottom: 0;
+	overflow-y: scroll;
+	background-color: #3b3a3f;
+}
+.back .sidebar .sidebar-nav{
+	padding: 0;
+	width: 240px;
+}
+.back .sidebar ul li a{
+	height: 60px;
+	line-height: 60px;
+	outline: none;
+	padding: 0 0 0 34px;
+}
+.back .sidebar ul .nav-first-level,
+.back .sidebar ul .nav-first-level:hover,
+.back .sidebar ul .nav-first-level:focus {
+	background-color: #49484b;
+	color: #929193;
+	font-size: 18px;
+}
+.back .sidebar ul .nav-first-level span{
+	height: 100%;
+	line-height: 60px;
+	margin-right: 18px;
+}
+
+.back .sidebar .nav-second-level li,
+.back .sidebar .nav-third-level li {
+	border-bottom: 0!important;
+}
+.back .sidebar .nav-second-level li a {
+	color: white;
+	font-size: 16px;
+}
+.back .sidebar .nav-third-level li a {
+	padding-left: 52px;
+}
+.back .sidebar .nav-second-level li a i{
+	margin-right: 30px;
+}
+.back .sidebar ul .nav-second-level li a:hover,
+.back .sidebar ul li .nav-second-level a:focus{
+	background-color: #394555;
+	outline: none;
+}
+.back .sidebar ul .nav-second-level li .active{
+	color: #0092ff;
+	border-right: 6px solid #0092ff;
+}
+.back .sidebar .nav-third-level li a i{
+	margin-right: 10px;
+}
+/* directives:sidebar */
+
+/* directives:multiselector */
+.multi-selector {
+}
+.multi-selector .select-side {
+}
+.multi-selector .select-side select {
+	height: 200px;
+}
+.multi-selector .select-opt {
+	height: 200px;
+	padding-top: 70px;
+	cursor: pointer;
+}
+/* directives:multiselector */
+
+/* back > stats */
+.back .stats{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.back .stats .panel-body{
+	background-color: #FFF;
+	padding: 0px;
+}
+.back .stats .panel-body .text-center{
+	position: relative;
+	bottom: 25px;
+	margin-bottom: -15px;
+	font-size: 14px;
+}
+.back .stats .panel-body .text-center img{
+	width: 114px;
+	height: 114px;
+	border: 6px solid white;
+	background-color: #0092ff;
+	margin-bottom: 10px;
+}
+.back .stats .text-right{
+	text-align: left;
+}
+.back .stats .text-right .balance{
+	margin-top: 30px;
+	margin-left: -25px;
+	color: #808080;
+	font-size: 12px;
+}
+.back .stats .text-right h1{
+	margin-left: -25px;
+	color: #333333;
+	font-size: 38px;
+}
+.back .stats .text-right a{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	height: 30px;
+	width: 106px;
+	background-color: #eeeeee;
+	color: #4d4d4d;
+}
+.back .stats .operate{
+	width: 100%;
+	background-color: #fbfbfb;
+	border-top: 1px solid #dfdfde;
+}
+.back .stats .operate a{
+	z-index: auto;
+	padding: 0px;
+	width: 76px;
+	height: 50px;
+	border-right: 1px solid #dfdfde;
+	line-height: 50px;
+	color: black;
+}
+/* back > stats */
+
+/* back > product */
+.back .product .panel-heading{
+	background-color: #fbfbfb;
+	height: 50px;
+	color: #4d4d4d;
+	padding: 0px 15px;
+	line-height: 50px;
+	font-size: 16px;
+}
+
+.back .product .panel-body{
+	padding: 0 30px 0 30px;
+}
+.back .product .panel-group-header {
+	font-size: 16px;
+	color: #4d4d4d;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	border-color: #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
+	margin-bottom: 0px;
+}
+.back .product .row{
+	margin: 0;
+}
+.back .product .row h4 {
+	margin-bottom: 20px;
+}
+.back .product .basic .btn{
+	background-color: #7cbdf7;
+}
+.back .product .service .btn{
+	background-color: #5f7ef2;
+}
+.back .product .count .btn{
+	background-color: #f58462;
+}
+
+.back .product table {
+	border: 0px;
+	border-collapse: separate;
+	border-spacing: 30px 20px;
+}
+.back .product table td, th {
+	border: 1px solid #dfdfde;
+	position: relative;
+	vertical-align: top;
+}
+
+.back .product .media {
+}
+.back .product .media .media-header {
+	margin-top: 20px;
+}
+.back .product .media .media-body .media-title {
+	font-size: 18px;
+	color: #4d4d4d;
+	margin-bottom: 8px;
+}
+.back .product .media .media-body .media-content {
+	font-size: 12px;
+	color: #808080;
+	text-align: center;
+}
+.back .product .media .media-body .media-content ul {
+  list-style-type: square;
+  list-style-position: inside;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding-left: 25%;
+  text-align: left;
+}
+.back .product .media .media-footer {
+}
+.back .product .media .media-footer a {
+	border-radius: 0px;
+	color: white;
+	border: 0px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 120px;
+	margin-left: -60px;
+}
+/* back > product */
+
+/* back > package */
+.back .package {
+	padding: 0px;
+}
+.back .package .panel-body {
+	padding: 0px;
+}
+.back .package .nav-tabs {
+	margin-bottom: 31px;
+	font-size: 19px;
+	font-weight: bold;
+}
+.back .package .nav-tabs > li {
+	width: 33.33%;
+}
+.back .package .nav-tabs > li > a {
+	margin-right: 0px;
+	text-align: center;
+	color: #5a5a5a;
+	height: 72px;
+	padding: 20px;
+}
+.back .package .nav-tabs > li > a:hover {
+	margin-right: 0px;
+	background-color: #0092ff;
+	color:white;
+}
+.back .package .nav-tabs > li.active > a,
+.back .package .nav-tabs > li.active > a:hover,
+.back .package .nav-tabs > li.active > a:focus {
+	margin-right: 0px;
+	border-color: #0092ff;
+	border-radius: 0px;
+	background-color: #0092ff;
+	color: white;
+}
+
+.back .package .package-table {
+	margin: 35px;
+}
+
+.back .package .table.couser >tbody>tr>td,
+.back .package .table.couser >tbody>tr>th,
+.back .package .table.couser >tfoot>tr>td,
+.back .package .table.couser >tfoot>tr>th,
+.back .package .table.couser >thead>tr>td,
+.back .package .table.couser >thead>tr>th {
+	width: 16%;
+}
+.back .package .table.employee >tbody>tr>td,
+.back .package .table.employee >tbody>tr>th,
+.back .package .table.employee >tfoot>tr>td,
+.back .package .table.employee >tfoot>tr>th,
+.back .package .table.employee >thead>tr>td,
+.back .package .table.employee >thead>tr>th {
+    width: 33%;
+}
+.back .package .table.charge >tbody>tr>td,
+.back .package .table.charge >tbody>tr>th,
+.back .package .table.charge >tfoot>tr>td,
+.back .package .table.charge >tfoot>tr>th,
+.back .package .table.charge >thead>tr>td,
+.back .package .table.charge >thead>tr>th {
+    width: 33%;
+}
+.back .package .table .title {
+	font-size: 28px;
+	margin: 20px 0 20px 0;
+	color: #575757;
+}
+.back .package .table .title > img {
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+.back .package .table .fit {
+	border-bottom: 0;
+	font-size: 15px;
+	margin: 20px 0;
+	color: #2d2d2d;
+}
+.back .package .table .contain {
+	border-top: 0;
+	border-bottom: 0;
+	font-size: 15px;
+	margin: 0;
+	color: #979797;
+}
+.back .package .table .goto > a {
+	font-size: 15px;
+	padding: 5px 15px 5px 15px;
+	margin: 20px 0 20px 0;
+	color: #979696;
+	background-color: #f5f8f8;
+	border-color: #dddddd;
+}
+.back .package .table .goto > a:hover {
+	color: #fff;
+	background-color: #0092ff;
+	border-color: #0092ff;
+}
+.back .package .table .usetype > a {
+	font-size: 15px;
+	padding: 5px 15px 5px 15px;
+	margin: 20px 0 20px 0;
+	min-width: 120px;
+}
+.back .package .table.couser .usetype > a {
+	width: 100%;
+}
+.back .package .table.employee .usetype > a {
+	width: 50%;
+}
+.back .package .table.charge .usetype > a {
+	width: 50%;
+}
+/* back > package */
+
+
+/* back > accountmgr/security */
+.back .security .editimage {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.back .security .table >tbody>tr>td,
+.back .security .table >tbody>tr>th,
+.back .security .table >tfoot>tr>td,
+.back .security .table >tfoot>tr>th,
+.back .security .table >thead>tr>td,
+.back .security .table >thead>tr>th {
+	border: 0px;
+}
+.back .security .table >tbody>tr>td:first-child {
+	width: 100px;
+}
+.back .security .table >tbody>tr>td:last-child {
+	width: 200px;
+}
+.back .security .table >tbody>tr>td:last-child > i {
+	color: #5cb85c;
+}
+
+/* back > accountmgr/security */

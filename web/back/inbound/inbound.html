@@ -1,0 +1,47 @@
+<div class="tab-content">
+	<div class="tab-pane fade in active"><br />
+		<div class="row">
+			<div class="col-lg-12">
+				<table class="table table-striped " st-pipe="ctrl.initList" st-table="ctrl.displayed">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>花型</th>
+                            <th>颜色</th>
+                            <th>总数量</th>
+                            <th>剩余数量</th>
+                            <th>价格</th>
+                            <th>时间</th>
+                            <th>备注</th>
+						</tr>
+					</thead>
+					<tbody ng-show="!ctrl.isLoading">
+						<tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in ctrl.displayed">
+							<td>{{row.id}}</td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.designName}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.colorName}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.totalQuantity}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.remainQuantity}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.price}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.time}}</div></td>
+                            <td><div ng-repeat="inbound in row.inbounds">{{inbound.note}}</div></td>
+							</td>
+						</tr>
+					</tbody>
+					<tbody ng-show="ctrl.isLoading">
+						<tr>
+							<td colspan="8" class="text-center"><div class="loading-indicator"></div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="text-center" st-pagination="" st-items-by-page="10" colspan="8">
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

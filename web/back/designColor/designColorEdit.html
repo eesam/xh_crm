@@ -1,0 +1,107 @@
+<div class="modal-header">
+	<h3 class="modal-title">编辑花型颜色</h3>
+</div>
+<div class="modal-body">
+	<form role="form">
+		<fieldset>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>花型</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.designName" readonly="readonly"></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>颜色</span>
+					</div>
+					<div class="col-sm-7">
+						<select class="form-control" ng-model="colorSelect" ng-options="x.name for x in colors"></select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>备注</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="text" ng-model="item.note"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-1">
+						<span>图片</span>
+					</div>
+					<div class="col-sm-7">
+						<span><input class="form-control" placeholder="" name="text" type="file" nv-file-select="" uploader="uploader" ng-click="clearItems()"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table" ng-show="uploader.queue.length">
+						<thead>
+							<tr>
+								<th width="50%">Name</th>
+								<th ng-show="uploader.isHTML5">Size</th>
+								<th ng-show="uploader.isHTML5">Progress</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="item in uploader.queue">
+								<td>
+									<strong>{{ item.file.name }}</strong>
+									<!-- Image preview -->
+									<!--auto height-->
+									<div ng-thumb="{ file: item._file, width: 400 }"></div>
+									<!--auto width-->
+									<!-- <div ng-thumb="{ file: item._file, height: 100 }"></div> -->
+									<!--fixed width and height -->
+									<!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+								</td>
+								<td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+								<td ng-show="uploader.isHTML5">
+									<div class="progress" style="margin-bottom: 0;">
+										<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+									</div>
+								</td>
+								<td class="text-center">
+									<span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+									<span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+									<span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+								</td>
+								<td nowrap>
+									<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+										<span class="glyphicon glyphicon-upload"></span> 上传
+									</button>
+									<!-- <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+										<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+									</button>
+									<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+										<span class="glyphicon glyphicon-trash"></span> Remove
+									</button> -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="onEdit()">确认</button>
+	<button class="btn btn-warning" ng-click="cancel()">取消</button>
+</div>

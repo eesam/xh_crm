@@ -1,0 +1,179 @@
+*{
+	font-family: "Microsoft Yahei";
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow-y: hidden;
+}
+a, a:visited, a:focus, a:hover {
+	text-decoration: none;
+}
+ol,ul {
+	list-style:none
+}
+
+table td img {
+	width: 340px;
+	height: 190px;
+}
+
+.clear {
+	clear: both;
+}
+.panel {
+	box-shadow: 0 2px 6px rgba(0,0,0,.1) !important;
+	-moz-box-shadow:0 2px 6px rgba(0,0,0,.1) !important;
+	border:0 !important;
+	border-radius: 0;
+}
+.panel-heading {
+	border-radius: 0;
+}
+.panel-red {
+    border-color: #d9534f;
+}
+.panel-red .panel-heading {
+	border-color: #d9534f;
+	color: #fff;
+	background-color: #d9534f;
+}
+.panel-green {
+	border-color: #5cb85c;
+}
+.panel-green .panel-heading {
+	border-color: #5cb85c;
+	color: #fff;
+	background-color: #5cb85c;
+}
+
+.head-img {
+	height: 40px;
+}
+.media-img {
+	height: 80px;
+}
+
+.page-header {
+	font-size: 24px;
+	color: #3b3a3f;
+	border-color: #dfdfdf;
+	margin: 34px 0 38px 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	border-bottom: 0;
+	border-radius: 0;
+}
+
+
+.btn {
+	border-radius: 0px;
+}
+.btn-outline {
+	color: inherit;
+	background-color: transparent;
+	transition: all .5s;
+}
+.btn-primary.btn-outline {
+	color: #428bca;
+}
+.btn-success.btn-outline {
+	color: #5cb85c;
+}
+.btn-info.btn-outline {
+	color: #5bc0de;
+}
+.btn-warning.btn-outline {
+	color: #f0ad4e;
+}
+.btn-danger.btn-outline {
+	color: #d9534f;
+}
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+	color: #fff;
+}
+
+.btn-yy {
+	color: #fff;
+	background-color: #0092ff;
+	border-color: #0092ff;
+}
+.btn-yy:hover,
+.btn-yy:focus,
+.btn-yy:active,
+.btn-yy.active,
+.open .dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #0092ff;
+	border-color: #0092ff;
+}
+
+
+
+.nav-tabs > li > a {
+	border-radius: 0;
+}
+.nav-tabs > li > a:hover {
+	background-color: #0092ff;
+	color:white;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	border-color: #dfdfdf;
+	border: -1px solid #ddd;
+	border-bottom: 0px;
+	border-top: 4px solid #0092ff;
+	border-radius: 0px;
+}
+
+
+.form-control {
+	border-radius: 0px;
+}
+.form-control-readonly {
+	border: 0px;
+	background-color: #eee;
+}
+
+.modal-content {
+	box-shadow: 0px 2px 6px rgba(0,0,0,.1) !important;
+	-moz-box-shadow:0px 2px 6px rgba(0,0,0,.1) !important;
+	border:0px !important;
+	border-radius: 0px;
+}
+
+.row-spacing {
+	margin-bottom: 10px;
+}
+
+.file {
+	position: relative;
+	display: inline-block;
+	background: #5cb85c;
+	border: 1px solid #5cb85c;
+	border-radius: 0px;
+	padding: 4px 12px;
+	overflow: hidden;
+	color: #fff;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+}
+.file input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+.file:hover {
+	background: #5cb85c;
+	border-color: #5cb85c;
+	color: #fff;
+	text-decoration: none;
+}

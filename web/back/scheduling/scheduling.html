@@ -1,0 +1,49 @@
+<div class="tab-content">
+	<div class="tab-pane fade in active"><br />
+		<div class="row">
+			<div class="col-lg-12">
+				<button type="button" class="btn btn-success" ng-click="ctrl.openAdd('lg')"><i class="glyphicon glyphicon-plus"></i> 新增排单</button>
+
+				<table class="table table-striped " st-pipe="ctrl.initList" st-table="ctrl.displayed">
+					<thead>
+						<tr>
+							<th>花型图片</th>
+							<th>描述</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody ng-show="!ctrl.isLoading">
+						<tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in ctrl.displayed">
+							<td><img ng-src="http://recordcdn-sz.qukanvideo.com/userUpload/1504166577640900/1531882272304971/picture/prescreen.png"/></td>
+							<td>
+								<b>花型：</b>{{row.designName}}<br/>
+								<b>颜色：</b>{{row.colorName}}<br/>
+								<b>供应商：</b>{{row.supplierName}}<br/>
+								<b>数量：</b>{{row.quantity}}（米）<br/>
+								<b>价格：</b>{{row.price}}<br/>
+								<b>时间：</b>{{row.time}}<br/>
+								<b>备注：</b>{{row.note}}
+							</td>
+							<td>
+								<button type="button" class="btn btn-sm btn-info" ng-click="ctrl.openEdit('lg', row)"><i class="fa fa-edit fa-fw"></i> </button>
+								<!-- <button type="button" class="btn btn-sm btn-danger" ng-click="ctrl.openDelete('lg', row)"><i class="fa fa-times fa-fw"></i> </button> -->
+							</td>
+						</tr>
+					</tbody>
+					<tbody ng-show="ctrl.isLoading">
+						<tr>
+							<td colspan="3" class="text-center"><div class="loading-indicator"></div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="text-center" st-pagination="" st-items-by-page="10" colspan="3">
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

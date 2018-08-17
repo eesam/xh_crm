@@ -1,0 +1,8 @@
+<div ng-mouseleave="change()" ng-mouseenter="change()">
+    <input style="background-color: white" ng-model="modal.pname" readonly class="form-control" type="text" ng-click="showSelect($event)" ng-blur="hideSelect($event)">
+    <div style="background-color: white;z-index:99;border: 1px solid #09c;position: absolute;" ng-show="isShow">
+        <treecontrol class="tree-boot" tree-model="data" on-selection="sureSelected(node)">
+            {{node.name}}
+        </treecontrol>
+    </div>
+</div>

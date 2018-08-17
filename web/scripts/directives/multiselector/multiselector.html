@@ -1,0 +1,18 @@
+<div class="row multi-selector">
+	<div class="col-sm-12">
+		<a ng-click="selectAll()"><strong>全选</strong></a>
+		<a ng-click="selectNone()"><strong>全不选</strong></a>
+	</div>
+	<div class="col-sm-5 select-side">
+		<select class="form-control" ng-dblclick="toRight()" multiple="multiple" ng-model="leftSelected" ng-options="item.name group by item.address for item in leftModel">
+		</select>
+	</div>
+	<div class="col-sm-2 text-center select-opt">
+		<p title="添加" ng-click="toLeft()"><span class="glyphicon glyphicon-chevron-left"></span></p>
+		<p title="移除" ng-click="toRight()"><span class="glyphicon glyphicon-chevron-right"></span></p>
+	</div>
+	<div class="col-sm-5 select-side">
+		<select class="form-control" ng-dblclick="toLeft()" multiple="multiple" ng-model="rightSelected" ng-options="item.name group by item.address for item in rightModel">
+		</select>
+	</div>
+</div>

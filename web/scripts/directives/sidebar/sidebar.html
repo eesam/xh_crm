@@ -1,0 +1,29 @@
+﻿<div class="navbar-default sidebar" role="navigation">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav in" id="side-menu">
+			<li ng-repeat="(firstindex, firstlevel) in firstlevels" ng-class="{active: firstlevel.collapse}">{{dropDown}}
+				<a class="nav-first-level" href="" ng-click="firstlevelToggle(firstindex)">{{::firstlevel.name}}<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level" collapse="firstlevel.collapse">
+					<li ng-repeat="(secondindex, secondlevel) in firstlevel.secondlevels" >
+						<a ng-if="checkNodeA(secondlevel)" ng-href="{{::secondlevel.href}}" target="{{::secondlevel.target}}" ng-click="onSelect(firstindex+'-'+secondindex)" class="{{sidebarActive==firstindex+'-'+secondindex ? 'active' : ''}}"><i class="fa fa-{{::secondlevel.icon}} fa-fw"></i> {{::secondlevel.name}}</a>
+
+						<a ng-if="checkNodeB(secondlevel)" ui-sref="{{::secondlevel.uisref}}" ng-click="onSelect(firstindex+'-'+secondindex)" class="{{sidebarActive==firstindex+'-'+secondindex ? 'active' : ''}}"><i class="fa fa-{{::secondlevel.icon}} fa-fw"></i> {{::secondlevel.name}}</a>
+
+						<a ng-if="checkNodeC(secondlevel)" ng-click="secondlevelToggle(firstindex, secondindex)"><i class="fa fa-{{::secondlevel.icon}} fa-fw"></i> {{::secondlevel.name}}</a>
+
+						<a ng-if="checkNodeD(secondlevel)" ng-href="{{::secondlevel.href}}" ng-click="secondlevelToggleSelect(firstindex, secondindex)" class="{{sidebarActive==firstindex+'-'+secondindex ? 'active' : ''}}"><i class="fa fa-{{::secondlevel.icon}} fa-fw"></i> {{::secondlevel.name}}</a>
+
+						<a ng-if="checkNodeE(secondlevel)" ui-sref="{{::secondlevel.uisref}}" ng-click="secondlevelToggleSelect(firstindex, secondindex)" class="{{sidebarActive==firstindex+'-'+secondindex ? 'active' : ''}}"><i class="fa fa-{{::secondlevel.icon}} fa-fw"></i> {{::secondlevel.name}}</a>
+
+						<ul class="nav nav-third-level" collapse="!secondlevel.expand">
+							<li ng-repeat="(thirdindex, thirdlevel) in secondlevel.thirdlevels" >
+								<a ng-if="hasHrefAttr(thirdlevel)" ng-href="{{::thirdlevel.href}}" target="{{::thirdlevel.target}}" ng-click="onSelect(firstindex+'-'+secondindex+'-'+thirdindex)" class="{{sidebarActive==firstindex+'-'+secondindex+'-'+thirdindex ? 'active' : ''}}"><i class="fa fa-{{::thirdlevel.icon}} fa-fw"></i> {{::thirdlevel.name}}</a>
+								<a ng-if="!hasHrefAttr(thirdlevel)" ui-sref="{{::thirdlevel.uisref}}" ng-click="onSelect(firstindex+'-'+secondindex+'-'+thirdindex)" class="{{sidebarActive==firstindex+'-'+secondindex+'-'+thirdindex ? 'active' : ''}}"><i class="fa fa-{{::thirdlevel.icon}} fa-fw"></i> {{::thirdlevel.name}}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

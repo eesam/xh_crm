@@ -1,0 +1,122 @@
+.hresize{
+    position: relative;
+}
+.account{
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    min-height: 680px;
+    position: absolute;
+}
+/*******account header start*******/
+.account .header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 80px;
+}
+.account .header .title{
+    color: #555555;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+.account .header .item{
+    margin-right: 26px;
+}
+.account .header .item a{
+    color: #777;
+}
+.account .header .item a:hover{
+    color: #0092ff;
+}
+/*******account header end*******/
+
+/*******account main start*******/
+.account .main{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: -webkit-linear-gradient(left, #007cff , #01aba3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #007cff , #01aba3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,#007cff , #01aba3); /* Firefox 3.6 - 15 */
+    background: url("../resources/img/lgnbg.png") no-repeat center center,linear-gradient(to right, #007cff , #01aba3); /* 标准的语法 */
+}
+.account .main .mg-bottom-1{
+    margin-bottom: 10px;
+}
+.account .main .mg-bottom-2{
+    margin-bottom: 20px;
+}
+.account .main .mg-bottom-5{
+    margin-bottom: 50px;
+}
+.account .main .mg-top{
+
+}
+.account .main .freedo{
+    text-align:right;
+    margin-top:10px;
+}
+.account .main.register{
+    height: 900px;
+}
+.account .main .panel-login,
+.account .main .panel-forget,
+.account .main .panel-register{
+    position: absolute;
+    margin-left: 62%;
+    top: 15%;
+}
+.account .main .panel-login{
+    width: 300px;
+}
+.account .main .panel-forget{
+    width: 400px;
+}
+.account .main .panel-register{
+    top: 13%;
+    width: 450px;
+}
+@media screen and (min-height: 900px) {
+    .account .main .panel-login,
+    .account .main .panel-forget{
+        top: 25%;
+    }
+}
+.account .main .panel .btn-do{
+    color: #fff;
+    background-color: #0092ff;
+    border-color: #0092ff;
+}
+.account .main .panel-login .btn-do,
+.account .main .panel-register .btn-do{
+    margin-top: 25px;
+}
+/*******account main end*******/
+
+/*******account footer start*******/
+.account .footer{
+    text-align: center;
+    padding-top: 15px;
+}
+.account .footer.register{
+    margin-bottom: 20px;
+}
+@media screen and (min-height: 900px) {
+    .account .footer{
+        padding-top: 50px;
+    }
+}
+/*******account footer end*******/
+
+.account .system-role {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: -webkit-linear-gradient(left, #007cff , #01aba3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #007cff , #01aba3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,#007cff , #01aba3); /* Firefox 3.6 - 15 */
+}

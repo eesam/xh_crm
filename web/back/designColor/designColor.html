@@ -1,0 +1,41 @@
+<div class="tab-content">
+	<div class="tab-pane fade in active"><br />
+		<div class="row">
+			<div class="col-lg-12">
+				<button type="button" class="btn btn-success" ng-click="ctrl.openAdd('lg')"><i class="glyphicon glyphicon-plus"></i> 新增花型颜色</button>
+
+				<table class="table table-striped " st-pipe="ctrl.initList" st-table="ctrl.displayed">
+					<thead>
+						<tr>
+							<th>图片</th>
+							<th>花型颜色</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody ng-show="!ctrl.isLoading">
+						<tr st-select-row="row" ng-repeat="row in ctrl.displayed">
+							<td><img ng-src="{{row.picUrl}}"/></td>
+							<td><b>花型：</b>{{row.designName}}<br/><b>颜色：</b>{{row.colorName}}<br/><b>备注：</b>{{row.note}}</td>
+							<td>
+								<!-- <button type="button" class="btn btn-sm btn-info" ng-click="ctrl.openEdit('lg', row)"><i class="fa fa-edit fa-fw"></i> </button>
+								<button type="button" class="btn btn-sm btn-danger" ng-click="ctrl.openDelete('lg', row)"><i class="fa fa-times fa-fw"></i> </button> -->
+							</td>
+						</tr>
+					</tbody>
+					<tbody ng-show="ctrl.isLoading">
+						<tr>
+							<td colspan="3" class="text-center"><div class="loading-indicator"></div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="text-center" st-pagination="" st-items-by-page="10" colspan="3">
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

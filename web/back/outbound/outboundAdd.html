@@ -1,0 +1,113 @@
+<div class="tab-content">
+	<div class="tab-pane fade in active"><br/>
+		<div class="row">
+			<div class="col-lg-4">
+				<button type="button" class="btn btn-success btn-lg" ng-click="addDesignColor()"><i class="fa fa-plus"></i> 新增花型颜色</button>
+			</div>
+		</div>
+		</div>
+		<div class="col-lg-12">
+			<hr />
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12" ng-repeat="dc in designColors">
+				<div class="panel panel-red">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-3">
+								<div class="huge">花型颜色</div>
+							</div>
+							<div class="col-xs-9 text-right">
+								<button type="button" class="btn btn-warning text-right" ng-click="deleteDesignColor($index)"><i class="fa fa-minus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<form role="form">
+							<fieldset>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-1">
+											<span>花型</span>
+										</div>
+										<div class="col-sm-7">
+											<select class="form-control" ng-model="designSelect[$index]" ng-options="x.name for x in designs" ng-change="designSelectChange($index)"></select>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-1">
+											<span>颜色</span>
+										</div>
+										<div class="col-sm-7">
+											<select class="form-control" ng-model="colorSelect[$index]" ng-options="x.name for x in colors" ng-change="colorSelectChange($index)"></select>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-1">
+											<span>客户</span>
+										</div>
+										<div class="col-sm-7">
+											<select class="form-control" ng-model="customerSelect[$index]" ng-options="x.name for x in customers"></select>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-1">
+											<span>备注</span>
+										</div>
+										<div class="col-sm-7">
+											<span><input class="form-control" placeholder="" name="text" type="text" ng-model="note[$index]"></span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2 col-sm-offset-1">
+										<button type="button" class="btn btn-success" ng-click="queryStock($index)"><i class="fa fa-plus"></i> 查询库存</button>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-9 col-sm-offset-1">
+											<table width="100%" class="table table-striped table-bordered table-hover no-footer dtr-inline">
+												<tr>
+													<th>入库价格</th>
+													<th>库存数量</th>
+													<th>出库价格</th>
+													<th>出库数量</th>
+													<th><input type="checkbox" ng-model="isCheck[$index]" ng-change="updateAllSelection($index)"></th>
+												</tr>
+												<tr ng-repeat="ic in outboundCloths[$index]">
+													<!-- 入库价格 -->
+													<td><input class="form-control" placeholder="" name="text" type="number" ng-model="ic.inboundPrice" readonly="readonly"></td>
+													<!-- 入库数量 -->
+													<td><input class="form-control" placeholder="" name="text" type="number" ng-model="ic.remainQuantity" readonly="readonly"></td>
+													<!-- 出库价格 -->
+													<td><input class="form-control" placeholder="" name="text" type="number" ng-model="$parent.outboundCloths[$parent.$index][$index].outboundPrice" ng-max="ic.inboundPrice"></td>
+													<!-- 出库数量 -->
+													<td><input class="form-control" placeholder="" name="text" type="number" ng-model="$parent.outboundCloths[$parent.$index][$index].outboundQuantity" ng-max="ic.inboundQuantity"></td>
+													<td><input type="checkbox" ng-model="$parent.outboundCloths[$parent.$index][$index].isCheck"></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<button class="btn btn-primary btn-lg" ng-click="onAdd()">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
