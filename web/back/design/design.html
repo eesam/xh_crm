@@ -14,7 +14,7 @@
 					</thead>
 					<tbody ng-show="!ctrl.isLoading">
 						<tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in ctrl.displayed">
-							<td>{{row.picUrl}}</td>
+							<td><img ng-src="{{row.picUrl}}" ng-click="ctrl.openLgPic('lg', row)"/></td>
 							<td><b>名称：</b>{{row.name}}<br/><b>数量：</b>{{row.quantity}}（米）<br/><b>备注：</b>{{row.note}}</td>
 							<td>
 								<button type="button" class="btn btn-sm btn-info" ng-click="ctrl.openEdit('lg', row)"><i class="fa fa-edit fa-fw"></i> </button>

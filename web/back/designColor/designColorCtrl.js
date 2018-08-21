@@ -137,6 +137,26 @@ angular.module('yunyunApp')
 		});
 	};
 
+	ctrl.openLgPic = function(size, selectrow) {
+		var modalInstance = $modal.open({
+			templateUrl : 'back/designColor/designColorPic.html',
+			controller : 'designColorModal',
+			size : size,
+			backdrop : 'static',
+			resolve : {
+				selectrow : function() { return selectrow; },
+				modaltype : function() { return 3; }
+			}
+		});
+
+		modalInstance.result.then(function(selectedItem) {
+			$scope.selected = selectedItem;
+		}, function() {
+			$log.info('Modal dismissed at: ' + new Date());
+		});
+	};
+
+
 }])
 // 模态框控制器
 .controller('designColorModal', ['$scope', '$modalInstance', 'designColorService', 'selectrow', 'modaltype', 'FileUploader',
@@ -239,6 +259,10 @@ angular.module('yunyunApp')
 			picUrl: "",
 			note: ""
 		};
+	}
+
+	if (modaltype == 3) {
+		$scope.picUrl = selectrow.picUrl;
 	}
 
 	// 新增

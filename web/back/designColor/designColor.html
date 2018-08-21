@@ -14,7 +14,7 @@
 					</thead>
 					<tbody ng-show="!ctrl.isLoading">
 						<tr st-select-row="row" ng-repeat="row in ctrl.displayed">
-							<td><img ng-src="{{row.picUrl}}"/></td>
+							<td><img ng-src="{{row.picUrl}}" ng-click="ctrl.openLgPic('lg', row)"/></td>
 							<td><b>花型：</b>{{row.designName}}<br/><b>颜色：</b>{{row.colorName}}<br/><b>备注：</b>{{row.note}}</td>
 							<td>
 								<!-- <button type="button" class="btn btn-sm btn-info" ng-click="ctrl.openEdit('lg', row)"><i class="fa fa-edit fa-fw"></i> </button>

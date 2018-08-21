@@ -123,6 +123,25 @@ angular.module('yunyunApp')
 		});
 	};
 
+	ctrl.openLgPic = function(size, selectrow) {
+		var modalInstance = $modal.open({
+			templateUrl : 'back/designColor/designColorPic.html',
+			controller : 'designModal',
+			size : size,
+			backdrop : 'static',
+			resolve : {
+				selectrow : function() { return selectrow; },
+				modaltype : function() { return 3; }
+			}
+		});
+
+		modalInstance.result.then(function(selectedItem) {
+			$scope.selected = selectedItem;
+		}, function() {
+			$log.info('Modal dismissed at: ' + new Date());
+		});
+	};
+
 	ctrl.openUploadPic = function(size, selectrow) {
 		$state.go('back.designColor', {designId: selectrow.id, designName: selectrow.name});
 	};
@@ -155,6 +174,10 @@ angular.module('yunyunApp')
 			quantity: selectrow.quantity,
 			note: selectrow.note
 		};
+	}
+
+	if (modaltype == 3) {
+		$scope.picUrl = selectrow.picUrl;
 	}
 
 	// 编辑
